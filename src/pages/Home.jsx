@@ -4,6 +4,7 @@ import CarouselTwo from "../components/CarouselTwo";
 
 import CarouselTemp from "../components/CarouselTemp";
 import HomeCards from "../components/HomeCards";
+import ClassroomComponent from "../components/ClassroomComponent";
 const Home = () => {
     return (
         <>
@@ -54,7 +55,11 @@ const Home = () => {
                 <HomeCards/>
             </div>
 
+            <div className="mt-24">
+                    <ClassroomComponent/>
+            </div>
 
+            <div className="mt-24">Ho</div>
         </>
     );
 };
