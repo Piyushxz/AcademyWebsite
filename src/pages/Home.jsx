@@ -1,6 +1,9 @@
 import CarouselOne from "../components/CarouselOne";
 import Navbar from "../components/Navbar";
 import CarouselTwo from "../components/CarouselTwo";
+
+import CarouselTemp from "../components/CarouselTemp";
+import HomeCards from "../components/HomeCards";
 const Home = () => {
     return (
         <>
@@ -42,6 +45,16 @@ const Home = () => {
             <div className="mt-24">
                     <CarouselTwo/>
             </div>
+
+            <div className="mt-24">
+                <CarouselTemp/>
+            </div>
+
+            <div className="mt-24">
+                <HomeCards/>
+            </div>
+
+
         </>
     );
 };
