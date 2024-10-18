@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <>
-            <div className="w-full bg-gray-900 text-white py-4">
+            <div style={{backgroundColor:"#0A1128"}}className="w-full bg-gray-900 text-white py-4 mt-24">
                 <div className="w-4/5 mx-auto flex justify-between items-center  border-t-2 border-gray-400 ">
                     <div className="mt-8">
                         <h1 className="font-montserrat text-gray-300 font-medium text-sm">ALLEN Career Institute Pvt. Ltd. © All Rights Reserved.</h1>

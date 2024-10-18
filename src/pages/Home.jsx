@@ -8,7 +8,7 @@ import ClassroomComponent from "../components/ClassroomComponent";
 const Home = () => {
     return (
         <>
-            <Navbar />
+          
 
             <div className="flex justify-center items-center mt-24">
              
@@ -59,9 +59,6 @@ const Home = () => {
                     <ClassroomComponent/>
             </div>
 
-            <div className="mt-24">
-                <Footer/>
-            </div>
         </>
     );
 };
