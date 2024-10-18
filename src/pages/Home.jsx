@@ -1,7 +1,7 @@
 import CarouselOne from "../components/CarouselOne";
 import Navbar from "../components/Navbar";
 import CarouselTwo from "../components/CarouselTwo";
-
+import Footer from "../components/Footer";
 import CarouselTemp from "../components/CarouselTemp";
 import HomeCards from "../components/HomeCards";
 import ClassroomComponent from "../components/ClassroomComponent";
@@ -59,7 +59,9 @@ const Home = () => {
                     <ClassroomComponent/>
             </div>
 
-            <div className="mt-24">Ho</div>
+            <div className="mt-24">
+                <Footer/>
+            </div>
         </>
     );
 };
