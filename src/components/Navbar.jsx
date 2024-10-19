@@ -1,4 +1,6 @@
 const Navbar = () => {
+
+    
     return (
         <>
             <div className="flex justify-between ml-24 mr-24">
@@ -47,14 +49,15 @@ const Navbar = () => {
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
                                 <h1 className="font-montserrat text-base font-normal text-white">Class 6-10</h1>
                                 <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="24px"
-                                    viewBox="0 -960 960 960"
-                                    width="24px"
-                                    fill="#FFFFFF"
-                                >
-                                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-                                </svg>
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                fill="#0A1128"
+                                className="mr-4"
+                            >
+                                <path d="M21 15.46l-5.27-.61c-.58-.07-1.13.25-1.38.77l-1.87 3.76c-3.01-1.07-5.44-3.5-6.51-6.51l3.76-1.87c.52-.25.84-.8.77-1.38L8.54 3H3c-.55 0-1 .45-1 1C2 14.97 9.03 22 21 22c.55 0 1-.45 1-1v-5.54c0-.55-.45-1-1-1z" />
+                            </svg>
                             </div>
                         </div>
                     </div>
@@ -191,7 +194,7 @@ const Navbar = () => {
                                         </svg>
                                     </div>
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">JEE MAINS </h1>
+                                        <h1 className="font-montserrat text-base font-normal text-white">JEE MAINS</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"

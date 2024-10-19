@@ -5,10 +5,22 @@ import Footer from "../components/Footer";
 import CarouselTemp from "../components/CarouselTemp";
 import HomeCards from "../components/HomeCards";
 import ClassroomComponent from "../components/ClassroomComponent";
+import { useModal } from "../context/modalContext";
+import ModalComponent from "../components/NavModal";
 const Home = () => {
+
+    const {modalDispatch,isNavModalOpen} = useModal()
+    const handleOpenNavModal = () =>{
+        modalDispatch({
+            type:"TOGGLE_NAVMODAL"
+        })
+    }
     return (
         <>
-          
+          {
+            isNavModalOpen &&
+            <ModalComponent/>
+          }
 
             <div className="flex justify-center items-center mt-24">
              
@@ -24,13 +36,16 @@ const Home = () => {
                     </div>
 
                     <div className="flex space-x-4">
-                        <button className="rounded-full border-4 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
+                        <button onClick={handleOpenNavModal}
+                         className="rounded-full border-2 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
                             NEET
                         </button>
-                        <button className="rounded-full border-4 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
+                        <button onClick={handleOpenNavModal}
+                        className="rounded-full border-2 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
                             JEE
                         </button>
-                        <button className="rounded-full border-4 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
+                        <button onClick={handleOpenNavModal}
+                         className="rounded-full border-2 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
                             Grade 6-10
                         </button>
                     </div>

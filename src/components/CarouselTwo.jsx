@@ -21,7 +21,7 @@ const CarouselTwo = () => {
 
     return (
         <div id="indicators-carousel" className="relative w-full flex flex-col items-center  rounded-lg max-w-screen-lg mx-auto max-h-72">
-            {/* Image Carousel */}
+           
             <div className="relative h-56 md:h-96 overflow-hidden w-full rounded-2xl">
                 {images.map((image, index) => (
                     <img
@@ -34,7 +34,6 @@ const CarouselTwo = () => {
                 ))}
             </div>
 
-            {/* Slider indicators (Dots) */}
             <div className="flex space-x-2 mt-4">
                 {images.map((_, index) => (
                     <button
