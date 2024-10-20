@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useModal } from '../context/modalContext';
 
 const ModalComponent = () => {
-    const {modalDispatch} = useModal();
+    const { modalDispatch } = useModal();
 
-    const[stream,setStream] = useState('neet');
+    const [stream, setStream] = useState();
+    const [age, setAge] = useState();
 
     const toggleModal = () => {
         modalDispatch({
@@ -12,16 +13,18 @@ const ModalComponent = () => {
         });
     };
 
+    const isDisabled = !stream || !age; // Disable if either stream or age is not selected
+
     return (
         <>
             <div
                 id="popup-modal"
                 className="fixed inset-0 z-50 flex justify-center items-center w-full h-screen bg-black bg-opacity-50"
             >
-                <div style={{backgroundColor:"#0f1825"}} className="relative p-4 w-full max-w-md max-h-full rounded-lg">
-                    <div style={{backgroundColor:"#0f1825"}} className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                       
-                        <div className="flex justify-between items-center ">
+                <div style={{ backgroundColor: "#0f1825" }} className="relative p-4 w-full max-w-md max-h-full rounded-lg">
+                    <div style={{ backgroundColor: "#0f1825" }} className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+
+                        <div className="flex justify-between items-center">
                             <h3 className="font-montserrat text-sm font-normal text-white">
                                 Select Your Stream
                             </h3>
@@ -49,81 +52,129 @@ const ModalComponent = () => {
                             </button>
                         </div>
 
-                        <div className='flex flex-col'>
+                        <div className="flex flex-col">
                             <div className="flex space-x-4 mt-4">
-                                <button 
-                                    onClick={()=>setStream('neet')}
-                                     style={{
-                                        backgroundColor: stream === "neet" ? "#78abfb" : "transparent" 
+                                <button
+                                    onClick={() => setStream('neet')}
+                                    style={{
+                                        backgroundColor: stream === "neet" ? "#78abfb" : "transparent"
                                     }}
-                                    className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white ">
+                                    className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white "
+                                >
                                     NEET
                                 </button>
-                                <button 
-                                onClick={()=>setStream('jee')}
-                                style={{
-                                    backgroundColor: stream === "jee" ? "#78abfb" : "transparent" 
-                                }}
-                                className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white">
+                                <button
+                                    onClick={() => setStream('jee')}
+                                    style={{
+                                        backgroundColor: stream === "jee" ? "#78abfb" : "transparent"
+                                    }}
+                                    className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
+                                >
                                     JEE
                                 </button>
                                 <button
-                                onClick={()=>setStream('grade')}
-                                style={{
-                                    backgroundColor: stream === "grade" ? "#78abfb" : "transparent" 
-                                }}
-                                 className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white">
+                                    onClick={() => setStream('grade')}
+                                    style={{
+                                        backgroundColor: stream === "grade" ? "#78abfb" : "transparent"
+                                    }}
+                                    className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
+                                >
                                     Grade 6-10
                                 </button>
                             </div>
 
                             <h3 className='font-montserrat text-sm font-normal text-white mt-6'>Select Your Class</h3>
-                            {
-                                stream === "grade" ? (
-                                    <>
-                                    <div className="flex space-x-4 mt-4">
-                                        <button 
-                                            className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            6th
-                                        </button>
-                                        <button className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            7th
-                                        </button>
-                                        <button className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            8th
-                                        </button>
-                                        <button className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            9th
-                                        </button>
-                                        <button className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            10th
-                                        </button>
-                                    </div>
-                                    </>
-                                ) :(
-                                    <>
-                                    <div className="flex space-x-4 mt-4">
-                                        <button 
-                                            className="rounded-full border-2 border-indigo-500 px-4 py-4 font-montserrat font-bold text-sm text-white">
-                                            11th
-                                        </button>
-                                        <button className="rounded-full border-2 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
-                                            12th
-                                        </button>
-                                        <button className="rounded-full border-2 border-indigo-500 px-6 py-4 font-montserrat font-bold text-sm text-white">
-                                            12th Plus
-                                        </button>
-                                    </div>
-                                    </>
-                                )
-                            }
+                            {stream === "grade" ? (
+                                <div className="flex space-x-4 mt-4">
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "6th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("6th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        6th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "7th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("7th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        7th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "8th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("8th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        8th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "9th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("9th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        9th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "10th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("10th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        10th
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="flex space-x-4 mt-4">
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "11th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("11th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        11th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "12th" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("12th")}
+                                        className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        12th
+                                    </button>
+                                    <button
+                                        style={{
+                                            backgroundColor: age === "12th+" ? "#78abfb" : "transparent"
+                                        }}
+                                        onClick={() => setAge("12th+")}
+                                        className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
+                                    >
+                                        12th Plus
+                                    </button>
+                                </div>
+                            )}
 
                         </div>
 
                         <div className="p-4 md:p-5 text-center mt-8 border-t-2 border-slate-50">
                             <button
                                 onClick={toggleModal}
-                                className="py-2.5 px-24 ml-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-[#eee] hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                                disabled={isDisabled}
+                                style={{
+                                    backgroundColor: isDisabled ? 'gray' : 'white',
+                                    opacity: isDisabled ? 0.6 : 1
+                                }}
+                                className="py-2.5 px-24 ml-3 text-sm font-medium text-gray-900 focus:outline-none rounded-full border border-[#eee] hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                             >
                                 Explore Courses
                             </button>
