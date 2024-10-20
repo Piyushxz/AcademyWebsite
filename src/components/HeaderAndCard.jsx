@@ -43,8 +43,8 @@ const HeaderAndCard = (props) =>{
                                     <h1 style={{color:"#bdc3ce"}} className="pl-2 font-montserrat text-xs font-normal">{props.description3}</h1>
                                     </div>
                             </div>
-                        <div className="flex justify-between px-4 mt-8">
-                            <h1 className="font-montserrat text-white font-semibold text-lg"> {props.price}</h1>
+                        <div className="flex justify-between px-4 mt-6">
+                            <h1 className="font-montserrat text-white font-semibold text-lg">  ₹{props.price}</h1>
                             <div className="flex items-center">
                                 <h1 style={{ color: "rgb(63, 141, 253)" }} className="font-montserrat text-white font-semibold text-sm">Know More</h1>
                                 <svg style={{ color: "rgb(63, 141, 253)" }} 
