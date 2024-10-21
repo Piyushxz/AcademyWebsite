@@ -3,6 +3,13 @@ import HeaderAndCard2 from "../../components/HeaderAndCard2"
 const Class12thJEE= () =>{
     return(
         <>
+            <div className="mt-14 w-4/5 mx-auto rounded-lg flex justify-center items-center">
+                <img 
+                    className="w-full h-auto rounded-lg object-cover" 
+                    src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1727943481/dark_w_CTA_1_kq6yqu.webp" 
+                    alt="Homepage Banner"
+                />
+            </div>
                     <div className="w-full mt-24 flex justify-center">
                 <div className="w-4/5 flex justify-start">
                     <h2 className="font-montserrat font-semibold text-3xl text-white">
