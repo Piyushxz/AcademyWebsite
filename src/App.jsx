@@ -5,6 +5,7 @@ import Class11th from './pages/neet/class11th';
 import Class11thJEE from './pages/jee/Class11th';
 import Class12th from './pages/neet/class12th';
 import Class12Droppers from './pages/neet/Class12Droppers';
+import Class12thJEE from './pages/jee/Class12th';
 function App() {
   return (
     <>
@@ -18,7 +19,7 @@ function App() {
           </Route>
           <Route path='jee'>
             <Route path='online-coaching-class-11' element={<Class11thJEE/>} />
-            <Route path='online-coaching-class-12' element={<Class12th />} />
+            <Route path='online-coaching-class-12' element={<Class12thJEE />} />
             <Route path='online-coaching-class-12-droppers' element={<Class12Droppers />} />
           </Route>
         </Route>
