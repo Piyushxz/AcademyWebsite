@@ -7,6 +7,11 @@ import Class12th from './pages/neet/class12th';
 import Class12Droppers from './pages/neet/Class12Droppers';
 import Class12thJEE from './pages/jee/Class12th';
 import Class12thDroppersJEE from './pages/jee/class12thDroppers';
+import Class6 from './pages/school/Class6';
+import Class7 from './pages/school/Class7';
+import Class8 from './pages/school/Class8';
+import Class9 from './pages/school/Class9';
+import Class10 from './pages/school/Class10';
 function App() {
   return (
     <>
@@ -23,6 +28,13 @@ function App() {
             <Route path='online-coaching-class-12' element={<Class12thJEE />} />
             <Route path='online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
           </Route>
+          <Route path='/class-6' element={<Class6/>}/>
+          <Route path='/class-7' element={<Class7/>}/>
+          <Route path='/class-8' element={<Class8/>}/>
+          <Route path='/class-9' element={<Class9/>}/>
+          <Route path='/class-10' element={<Class10/>}/>
+
+
         </Route>
       </Routes>
     </>
