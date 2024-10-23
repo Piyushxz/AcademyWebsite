@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useModal } from '../context/modalContext';
-
+import { useNavigate } from 'react-router-dom';
 const ModalComponent = () => {
     const { modalDispatch } = useModal();
-
+    const navigate = useNavigate()
     const [stream, setStream] = useState();
     const [age, setAge] = useState();
 
@@ -13,7 +13,18 @@ const ModalComponent = () => {
         });
     };
 
-    const isDisabled = !stream || !age; // Disable if either stream or age is not selected
+    const handleGetCoursesClick = () =>{
+        if(stream==="neet"){
+                navigate(`/neet/online-coaching-class-${age}`)
+        }
+        else if(stream==="jee"){
+            navigate(`/jee/online-coaching-class-${age}`)
+        }
+        else{
+            navigate(`class-${age}`)
+        }
+    }
+    const isDisabled = !stream || !age; 
 
     return (
         <>
@@ -88,27 +99,27 @@ const ModalComponent = () => {
                                 <div className="flex space-x-4 mt-4">
                                     <button
                                         style={{
-                                            backgroundColor: age === "6th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "6" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("6th")}
+                                        onClick={() => setAge("6")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         6th
                                     </button>
                                     <button
                                         style={{
-                                            backgroundColor: age === "7th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "7" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("7th")}
+                                        onClick={() => setAge("7")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         7th
                                     </button>
                                     <button
                                         style={{
-                                            backgroundColor: age === "8th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "8" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("8th")}
+                                        onClick={() => setAge("8")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         8th
@@ -117,16 +128,16 @@ const ModalComponent = () => {
                                         style={{
                                             backgroundColor: age === "9th" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("9th")}
+                                        onClick={() => setAge("9")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         9th
                                     </button>
                                     <button
                                         style={{
-                                            backgroundColor: age === "10th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "10" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("10th")}
+                                        onClick={() => setAge("10")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         10th
@@ -136,27 +147,27 @@ const ModalComponent = () => {
                                 <div className="flex space-x-4 mt-4">
                                     <button
                                         style={{
-                                            backgroundColor: age === "11th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "11" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("11th")}
+                                        onClick={() => setAge("11")}
                                         className="rounded-full border-2 border-[#78abfb] px-4 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         11th
                                     </button>
                                     <button
                                         style={{
-                                            backgroundColor: age === "12th" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "12" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("12th")}
+                                        onClick={() => setAge("12")}
                                         className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         12th
                                     </button>
                                     <button
                                         style={{
-                                            backgroundColor: age === "12th+" ? "#78abfb" : "transparent"
+                                            backgroundColor: age === "12-droppers" ? "#78abfb" : "transparent"
                                         }}
-                                        onClick={() => setAge("12th+")}
+                                        onClick={() => setAge("12-droppers")}
                                         className="rounded-full border-2 border-[#78abfb] px-6 py-4 font-montserrat font-bold text-sm text-white"
                                     >
                                         12th Plus
@@ -168,7 +179,7 @@ const ModalComponent = () => {
 
                         <div className="p-4 md:p-5 text-center mt-8 border-t-2 border-slate-50">
                             <button
-                                onClick={toggleModal}
+                                onClick={handleGetCoursesClick}
                                 disabled={isDisabled}
                                 style={{
                                     backgroundColor: isDisabled ? 'gray' : 'white',
