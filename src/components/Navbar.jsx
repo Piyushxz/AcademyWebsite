@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-
+    const navigate = useNavigate()
     
+    const handleLogoClick = () =>{
+        navigate("/")
+    }
     return (
         <>
             <div className="flex justify-between ml-24 mr-24">
                 <div className="flex justify-center relative">
-                    <div className="p-6">
+                    <div className="p-6 " onClick={handleLogoClick}>
                         <img src="https://allen.in/logo_dark.svg" alt="Logo" className="h-8" />
                     </div>
 
@@ -14,12 +18,12 @@ const Navbar = () => {
                         <h2 className="font-montserrat text-base font-semibold text-white">Exams</h2>
                                             <div
                         style={{ backgroundColor: "#233a6c" }}
-                        className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 mt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
+                        className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
                     >
                         <div className="flex flex-col">
                       
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">NEET</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">NEET</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="24px"
@@ -33,7 +37,7 @@ const Navbar = () => {
 
                    
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">JEE</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">JEE</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="24px"
@@ -47,17 +51,16 @@ const Navbar = () => {
 
                       
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">Class 6-10</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">Class 6-10</h1>
                                 <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                height="24px"
-                                viewBox="0 0 24 24"
-                                width="24px"
-                                fill="#0A1128"
-                                className="mr-4"
-                            >
-                                <path d="M21 15.46l-5.27-.61c-.58-.07-1.13.25-1.38.77l-1.87 3.76c-3.01-1.07-5.44-3.5-6.51-6.51l3.76-1.87c.52-.25.84-.8.77-1.38L8.54 3H3c-.55 0-1 .45-1 1C2 14.97 9.03 22 21 22c.55 0 1-.45 1-1v-5.54c0-.55-.45-1-1-1z" />
-                            </svg>
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#FFFFFF"
+                                >
+                                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -68,12 +71,12 @@ const Navbar = () => {
                         <h2 className="font-montserrat text-base font-semibold text-white">Programs</h2>
                         <div
                         style={{ backgroundColor: "#233a6c" }}
-                        className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 mt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
+                        className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-6 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
                     >
                         <div className="flex flex-col">
                          
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">Online Programs</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">Online Programs</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="24px"
@@ -87,7 +90,7 @@ const Navbar = () => {
 
                         
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">Classroom programs</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">Classroom programs</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="24px"
@@ -101,7 +104,7 @@ const Navbar = () => {
 
                          
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                <h1 className="font-montserrat text-base font-normal text-white">Distance Learning</h1>
+                                <h1 className="font-montserrat text-xs font-normal text-white">Distance Learning</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="24px"
@@ -122,12 +125,12 @@ const Navbar = () => {
                         
                         <div
                                 style={{ backgroundColor: "#233a6c" }}
-                                className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 mt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
+                                className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
                             >
                                 <div className="flex flex-col">
                                    
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">ADSAT</h1>
+                                        <h1 className="font-montserrat text-xs font-normal text-white">ADSAT</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"
@@ -141,7 +144,7 @@ const Navbar = () => {
 
                                
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">TALENTX</h1>
+                                        <h1 className="font-montserrat text-xs font-normal text-white">TALENTX</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"
@@ -163,12 +166,12 @@ const Navbar = () => {
                         
                         <div
                                 style={{ backgroundColor: "#233a6c" }}
-                                className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 mt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
+                                className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-4 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
                             >
                                 <div className="flex flex-col">
                                    
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">NEET</h1>
+                                        <h1 className="font-montserrat text-xs font-normal text-white">NEET</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"
@@ -182,7 +185,7 @@ const Navbar = () => {
 
                                
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">JEE(MAIN + ADVANCED)</h1>
+                                        <h1 className="font-montserrat text-xs font-normal text-white">JEE(MAIN + ADVANCED)</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"
@@ -194,7 +197,7 @@ const Navbar = () => {
                                         </svg>
                                     </div>
                                     <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
-                                        <h1 className="font-montserrat text-base font-normal text-white">JEE MAINS</h1>
+                                        <h1 className="font-montserrat text-xs font-normal text-white">JEE MAINS</h1>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24px"
