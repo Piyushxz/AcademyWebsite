@@ -12,13 +12,14 @@ import Class7 from './pages/school/Class7';
 import Class8 from './pages/school/Class8';
 import Class9 from './pages/school/Class9';
 import Class10 from './pages/school/Class10';
+import Neet from './pages/neet/Neet';
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='neet'>
+          <Route path='neet' element={<Neet/>}>
             <Route path='online-coaching-class-11' element={<Class11th />} />
             <Route path='online-coaching-class-12' element={<Class12th />} />
             <Route path='online-coaching-class-12-droppers' element={<Class12Droppers />} />

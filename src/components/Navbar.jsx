@@ -5,6 +5,10 @@ const Navbar = () => {
     const handleLogoClick = () =>{
         navigate("/")
     }
+
+    const handleHoverNEETClick = () =>{
+        navigate("/neet")
+    }
     return (
         <>
             <div className="flex justify-between ml-24 mr-24">
@@ -22,7 +26,8 @@ const Navbar = () => {
                     >
                         <div className="flex flex-col">
                       
-                            <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
+                            <div onClick={handleHoverNEETClick}
+                            className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
                                 <h1 className="font-montserrat text-xs font-normal text-white">NEET</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -71,11 +76,11 @@ const Navbar = () => {
                         <h2 className="font-montserrat text-base font-semibold text-white">Programs</h2>
                         <div
                         style={{ backgroundColor: "#233a6c" }}
-                        className="absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-6 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
+                        className=" absolute left-0 top-12 hidden group-hover:block bg-white text-black p-4 pt-6 rounded-lg shadow-lg w-64 transition-opacity duration-700 ease-in-out"
                     >
                         <div className="flex flex-col">
                          
-                            <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
+                            <div className="group realtive flex justify-between group  p-2 hover:bg-[#78abfb] transition-colors duration-300">
                                 <h1 className="font-montserrat text-xs font-normal text-white">Online Programs</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +91,9 @@ const Navbar = () => {
                                 >
                                     <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
                                 </svg>
+
                             </div>
+
 
                         
                             <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
@@ -119,6 +126,8 @@ const Navbar = () => {
                     </div>
 
                     </div>
+                    
+                    
 
                     <div className="relative group m-6 hover:border-b-4 border-indigo-500 transition duration-300">
                         <h2 className="font-montserrat text-base font-semibold text-white">Scholarships</h2>
