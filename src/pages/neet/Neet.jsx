@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
-
+import { useNavigate } from "react-router-dom";
 const Neet = () => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="flex justify-center w-full mt-24">
@@ -23,11 +24,16 @@ const Neet = () => {
             </div>
 
             <div className="w-full flex justify-center mt-20">
-                <div className="w-3/5 flex justify-center bg-white">
-                    <Card />
+                <div className="w-2/3 flex justify-center ">
+                    <Card onClick={()=>navigate("/neet/online-coaching-class-11")}
+                    title={"For 11th"} title2={"1 year programs"} img={"https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729766512/U_11th_ah95gg.webp"} />
+                    <Card onClick={()=>navigate("/neet/online-coaching-class-12")}
+                    title={"For 12th"} title2={"1 year programs"} img={"https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729766525/U_12th_tjph91.webp"} />
+                    <Card onClick={()=>navigate("/neet/online-coaching-class-12-droppers")}
+                    title={"For 12th Plus"} title2={"1 year programs"} img={"https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729766519/U_12th__bv4mhn.webp"} />
                 </div>
             </div>
-
+        
         </>
     );
 }

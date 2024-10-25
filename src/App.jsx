@@ -13,29 +13,28 @@ import Class8 from './pages/school/Class8';
 import Class9 from './pages/school/Class9';
 import Class10 from './pages/school/Class10';
 import Neet from './pages/neet/Neet';
+
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='neet' element={<Neet/>}>
-            <Route path='online-coaching-class-11' element={<Class11th />} />
-            <Route path='online-coaching-class-12' element={<Class12th />} />
-            <Route path='online-coaching-class-12-droppers' element={<Class12Droppers />} />
-          </Route>
-          <Route path='jee'>
-            <Route path='online-coaching-class-11' element={<Class11thJEE/>} />
-            <Route path='online-coaching-class-12' element={<Class12thJEE />} />
-            <Route path='online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
-          </Route>
-          <Route path='/class-6' element={<Class6/>}/>
-          <Route path='/class-7' element={<Class7/>}/>
-          <Route path='/class-8' element={<Class8/>}/>
-          <Route path='/class-9' element={<Class9/>}/>
-          <Route path='/class-10' element={<Class10/>}/>
-
-
+          <Route path='/neet' element={<Neet />}/>
+          <Route path='/neet/online-coaching-class-11' element={<Class11th />} />
+          <Route path='/neet/online-coaching-class-12' element={<Class12th />} />
+          <Route path='/neet/online-coaching-class-12-droppers' element={<Class12Droppers />} />
+         
+          <Route path='/jee'/>
+            <Route path='/jee/online-coaching-class-11' element={<Class11thJEE />} />
+            <Route path='/online-coaching-class-12' element={<Class12thJEE />} />
+            <Route path='/online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
+          
+          <Route path='class-6' element={<Class6 />} />
+          <Route path='class-7' element={<Class7 />} />
+          <Route path='class-8' element={<Class8 />} />
+          <Route path='class-9' element={<Class9 />} />
+          <Route path='class-10' element={<Class10 />} />
         </Route>
       </Routes>
     </>
