@@ -1,6 +1,7 @@
 import Card from "../../components/Card";
 import { useNavigate } from "react-router-dom";
 import ClassroomComponent from "../../components/ClassroomComponent";
+import FAQs from "../../components/Faqs";
 const Neet = () => {
     const navigate = useNavigate()
     return (
@@ -134,7 +135,14 @@ const Neet = () => {
 
                 </div>
             </div>
-            
+            <div className="w-full flex justify-center mt-20">
+                <div className="w-2/3 flex ">
+                    <h1 className="font-montserrat font-semibold text-3xl text-white py-6">Frequently Asked Questions</h1>
+                </div>
+            </div>
+            <div className="w-full flex justify-center mt-2">
+            <FAQs/>
+            </div>
 
         </>
     );

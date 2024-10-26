@@ -4,7 +4,7 @@ const Card = (props) => {
             <div onClick={props.onClick} style={{ backgroundColor: "#1a2439", overflow: "hidden" }} className="h-64 w-96 rounded-lg mr-8 flex flex-col">
                 <div className="pt-4">
                     <h1 className="font-montserrat font-semibold text-xl text-white ml-6">{props.title}</h1>
-                    <h1 style={{ color: "white" }} className="font-montserrat font-semibold text-base ml-6 ">{props.title2}</h1>
+                    <h1 style={{ color: "white" }} className="font-montserrat font-semibold text-sm ml-6 ">{props.title2}</h1>
                 </div>
 
                 <div className="mt-16 flex justify-between items-center">
