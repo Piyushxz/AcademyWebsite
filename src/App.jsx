@@ -14,6 +14,7 @@ import Class9 from './pages/school/Class9';
 import Class10 from './pages/school/Class10';
 import Neet from './pages/neet/Neet';
 import Jee from './pages/jee/Jee';
+import SchoolHomePage from './pages/school/SchoolHomePage';
 function App() {
   return (
     <>
@@ -29,7 +30,7 @@ function App() {
             <Route path='/jee/online-coaching-class-11' element={<Class11thJEE />} />
             <Route path='/jee/online-coaching-class-12' element={<Class12thJEE />} />
             <Route path='/jee/online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
-          
+          <Route path='/classes-6-10'element={<SchoolHomePage/>} />
           <Route path='class-6' element={<Class6 />} />
           <Route path='class-7' element={<Class7 />} />
           <Route path='class-8' element={<Class8 />} />

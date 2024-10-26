@@ -33,7 +33,7 @@ const Jee = () =>{
 
             <div className="w-full flex justify-center ">
 
-                <div className="w-2/3 flex justify-center ">
+                <div className="w-2/3 flex justify-center gap-6">
                     <Card onClick={()=>navigate("/jee/online-coaching-class-11")}
                     title={"For 11th"} title2={"1 year programs"} img={"https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729766512/U_11th_ah95gg.webp"} />
                     <Card onClick={()=>navigate("/jee/online-coaching-class-12")}

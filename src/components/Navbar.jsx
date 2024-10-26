@@ -56,7 +56,8 @@ const Navbar = () => {
                             </div>
 
                       
-                            <div className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
+                            <div onClick={()=>navigate('/classes-6-10')}
+                             className="flex justify-between p-2 hover:bg-[#78abfb] transition-colors duration-300">
                                 <h1 className="font-montserrat text-xs font-normal text-white">Class 6-10</h1>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
