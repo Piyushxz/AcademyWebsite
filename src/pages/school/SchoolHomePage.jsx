@@ -59,6 +59,13 @@ const SchoolHomePage = () => {
                     />
                 </div>
             </div>
+
+            <div className="w-full justify-center flex mt-24">
+                <div className="w-2/3">
+                    <img className="w-full" src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1722233787/tallentex_nfqhey.webp" />
+                </div>
+               
+            </div>
         </>
     );
 };
