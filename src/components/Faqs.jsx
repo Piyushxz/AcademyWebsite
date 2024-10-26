@@ -11,7 +11,7 @@ const FAQs = () => {
     <div style={{ backgroundColor: "rgb(26, 36, 57)" }} className="p-4 bg-white rounded-lg w-2/3">
       <div id="accordion-flush">
         
-        <div id="accordion-flush-heading-1" className="mb-4"> {/* Add margin-bottom here */}
+        <div id="accordion-flush-heading-1" > 
           <button
             type="button"
             className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 dark:text-gray-400"
