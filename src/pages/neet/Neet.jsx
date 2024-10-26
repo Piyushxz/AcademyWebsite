@@ -1,5 +1,6 @@
 import Card from "../../components/Card";
 import { useNavigate } from "react-router-dom";
+import ClassroomComponent from "../../components/ClassroomComponent";
 const Neet = () => {
     const navigate = useNavigate()
     return (
@@ -116,11 +117,24 @@ const Neet = () => {
             </div>
 
 
-            <div className="w-full flex justify-center mt-20">
+            <div className="mt-10">
+                    <ClassroomComponent/>
+            </div>
+
+            <div className="w-full flex justify-center mt-14">
                 <div className="w-2/3 flex ">
-                    <h1 className="font-montserrat font-semibold text-3xl text-white py-6">Looking for a classroom based Program?</h1>
+                    <h1 className="font-montserrat font-semibold text-3xl text-white py-6">NEET Online Coaching</h1>
                 </div>
             </div>
+            <div className="w-full flex justify-center mt-2">
+                <div className="w-2/3 flex flex-col">
+                    <span className="font-montserrat font-normal text-sm text-white ">ALLEN’s NEET Online Coaching Courses are meticulously crafted to equip students with the knowledge and strategies needed to excel in the NEET exam. To secure a seat in a prestigious medical college, preparation must be strategic, consistent, and guided by expert mentors. ALLEN’s NEET Online Course offers an integrated approach, combining high-quality study materials and practice papers, ensuring thorough preparation under the guidance of our experienced and renowned faculty.
+                    At ALLEN, we prioritize quality without compromise. Our comprehensive NEET preparation materials are designed to simplify complex concepts and accelerate your learning process. The course includes subject-specific tests in Physics, Chemistry, Botany, and Zoology, allowing students to evaluate their performance and target areas for improvement. Additionally, ALLEN provides improvement books to help students strengthen their weak areas and track their progress throughout their preparation journey. Enroll today and take a step closer to your medical dream with ALLEN’s NEET Online Coaching!</span>
+                    <span className="font-montserrat font-normal text-sm text-white mt-2" >At ALLEN, we prioritize quality without compromise. Our comprehensive NEET preparation materials are designed to simplify complex concepts and accelerate your learning process. The course includes subject-specific tests in Physics, Chemistry, Botany, and Zoology, allowing students to evaluate their performance and target areas for improvement. Additionally, ALLEN provides improvement books to help students strengthen their weak areas and track their progress throughout their preparation journey. Enroll today and take a step closer to your medical dream with ALLEN’s NEET Online Coaching!</span>
+
+                </div>
+            </div>
+            
 
         </>
     );
