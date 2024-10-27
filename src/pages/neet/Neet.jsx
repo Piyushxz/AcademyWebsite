@@ -32,9 +32,9 @@ const Neet = () => {
                 </div>
             </div>
 
-            <div className="w-full flex justify-center gap-4">
+            <div className="w-full flex justify-center ">
 
-                <div className="w-2/3 flex justify-center ">
+                <div className="w-2/3 flex justify-center gap-4">
                     <Card onClick={()=>navigate("/neet/online-coaching-class-11")}
                     title={"For 11th"} title2={"1 year programs"} img={"https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729766512/U_11th_ah95gg.webp"} />
                     <Card onClick={()=>navigate("/neet/online-coaching-class-12")}

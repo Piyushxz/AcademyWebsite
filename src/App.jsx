@@ -16,6 +16,7 @@ import Neet from './pages/neet/Neet';
 import Jee from './pages/jee/Jee';
 import SchoolHomePage from './pages/school/SchoolHomePage';
 import OnlineTestSeriesNeet from './pages/neet/OnlineTestSeriesNeet';
+import OnlineTestSeriesJEE from './pages/jee/OnlineTestSeriesJEE';
 function App() {
   return (
     <>
@@ -29,9 +30,13 @@ function App() {
           <Route path='/neet/online-test-series' element={<OnlineTestSeriesNeet />} />
          
           <Route path='/jee' element={<Jee/>}/>
-            <Route path='/jee/online-coaching-class-11' element={<Class11thJEE />} />
-            <Route path='/jee/online-coaching-class-12' element={<Class12thJEE />} />
-            <Route path='/jee/online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
+          <Route path='/jee/online-coaching-class-11' element={<Class11thJEE />} />
+          <Route path='/jee/online-coaching-class-12' element={<Class12thJEE />} />
+          <Route path='/jee/online-coaching-class-12-droppers' element={<Class12thDroppersJEE />} />
+          <Route path='/jee-main/online-test-series' element={<OnlineTestSeriesJEE />} />
+
+
+
           <Route path='/classes-6-10'element={<SchoolHomePage/>} />
           <Route path='class-6' element={<Class6 />} />
           <Route path='class-7' element={<Class7 />} />
