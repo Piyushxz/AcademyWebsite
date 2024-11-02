@@ -28,7 +28,7 @@ const Class12thDroppersJEE= () =>{
                 draggable="false"
             />
         </div>
-        <div className="w-2/3 flex justify-start flex-row flex-wrap">
+        <div className="w-2/3 flex justify-start gap-2 flex-wrap">
         {/* 1 */}
             <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg">
                     <div className="p-4  ">
@@ -69,7 +69,7 @@ const Class12thDroppersJEE= () =>{
 
             </div>
             {/* 2 */}
-            <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ml-4">
+            <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ">
                     <div className="p-4  ">
                         <button className=" text-xs p-2 text-white rounded-full bg-black flex items">
                         <svg className="mr-2"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.867 5.733V8.4c0 2.333-1.2 3.333-3 3.333h-6c-1.8 0-3-1-3-3.333V5.733c0-1.766.69-2.766 1.8-3.146.36-.127.762-.187 1.2-.187h6c.438 0 .84.06 1.2.187 1.11.38 1.8 1.38 1.8 3.146z"></path><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M6.867 7.075v-.84c0-1.038.783-1.467 1.74-.947l.771.416.77.417c.958.52.958 1.37 0 1.89l-.77.417-.77.417c-.958.52-1.741.096-1.741-.948v-.822z"></path><path stroke="#D8DBDF" stroke-linecap="round" d="M2.867 5.067v0c-.92 0-1.667.746-1.667 1.666v3.482a3.333 3.333 0 003.334 3.333h6.518a1.815 1.815 0 001.815-1.815v0"></path></svg>
@@ -107,7 +107,7 @@ const Class12thDroppersJEE= () =>{
 
             </div>
             {/* {3} */}
-            <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ml-4">
+            <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ">
                     <div className="p-4  ">
                         <button className=" text-xs p-2 text-white rounded-full bg-black flex items">
                         <svg className="mr-2"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.867 5.733V8.4c0 2.333-1.2 3.333-3 3.333h-6c-1.8 0-3-1-3-3.333V5.733c0-1.766.69-2.766 1.8-3.146.36-.127.762-.187 1.2-.187h6c.438 0 .84.06 1.2.187 1.11.38 1.8 1.38 1.8 3.146z"></path><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M6.867 7.075v-.84c0-1.038.783-1.467 1.74-.947l.771.416.77.417c.958.52.958 1.37 0 1.89l-.77.417-.77.417c-.958.52-1.741.096-1.741-.948v-.822z"></path><path stroke="#D8DBDF" stroke-linecap="round" d="M2.867 5.067v0c-.92 0-1.667.746-1.667 1.666v3.482a3.333 3.333 0 003.334 3.333h6.518a1.815 1.815 0 001.815-1.815v0"></path></svg>
@@ -241,7 +241,7 @@ const Class12thDroppersJEE= () =>{
                 draggable="false"
             />
         </div>
-        <div className="w-2/3 flex justify-start flex-row flex-wrap">
+        <div className="w-2/3 flex justify-start gap-2 flex-wrap">
         {/* 1 */}
             <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg">
                     <div className="p-4  ">
@@ -298,7 +298,7 @@ const Class12thDroppersJEE= () =>{
                 draggable="false"
             />
         </div>
-        <div className="w-2/3 flex justify-start flex-row flex-wrap">
+        <div className="w-2/3 flex justify-start gap-2 flex-wrap">
         {/* 1 */}
             <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg">
                     <div className="p-4  ">
@@ -339,7 +339,7 @@ const Class12thDroppersJEE= () =>{
 
             </div>
         {/* 2 */}
-        <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ml-4">
+        <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg ">
                     <div className="p-4  ">
                         <button className=" text-xs p-2 text-white rounded-full bg-black flex items">
                         <svg className="mr-2"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.867 5.733V8.4c0 2.333-1.2 3.333-3 3.333h-6c-1.8 0-3-1-3-3.333V5.733c0-1.766.69-2.766 1.8-3.146.36-.127.762-.187 1.2-.187h6c.438 0 .84.06 1.2.187 1.11.38 1.8 1.38 1.8 3.146z"></path><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M6.867 7.075v-.84c0-1.038.783-1.467 1.74-.947l.771.416.77.417c.958.52.958 1.37 0 1.89l-.77.417-.77.417c-.958.52-1.741.096-1.741-.948v-.822z"></path><path stroke="#D8DBDF" stroke-linecap="round" d="M2.867 5.067v0c-.92 0-1.667.746-1.667 1.666v3.482a3.333 3.333 0 003.334 3.333h6.518a1.815 1.815 0 001.815-1.815v0"></path></svg>
@@ -396,7 +396,7 @@ const Class12thDroppersJEE= () =>{
         </div>
         <div className="w-2/3 flex justify-start flex-row flex-wrap">
         {/* 1 */}
-            <div style = {{backgroundColor: "#1a2439"}}className="w-80 h-64 mt-8 rounded-lg">
+            <div style = {{backgroundColor: "#1a2439"}}className="sm:w-80 h-64 mt-8 rounded-lg">
                     <div className="p-4  ">
                         <button className=" text-xs p-2 text-white rounded-full bg-black flex items">
                         <svg className="mr-2"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.867 5.733V8.4c0 2.333-1.2 3.333-3 3.333h-6c-1.8 0-3-1-3-3.333V5.733c0-1.766.69-2.766 1.8-3.146.36-.127.762-.187 1.2-.187h6c.438 0 .84.06 1.2.187 1.11.38 1.8 1.38 1.8 3.146z"></path><path stroke="#D8DBDF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M6.867 7.075v-.84c0-1.038.783-1.467 1.74-.947l.771.416.77.417c.958.52.958 1.37 0 1.89l-.77.417-.77.417c-.958.52-1.741.096-1.741-.948v-.822z"></path><path stroke="#D8DBDF" stroke-linecap="round" d="M2.867 5.067v0c-.92 0-1.667.746-1.667 1.666v3.482a3.333 3.333 0 003.334 3.333h6.518a1.815 1.815 0 001.815-1.815v0"></path></svg>
