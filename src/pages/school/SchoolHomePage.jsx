@@ -4,24 +4,24 @@ const SchoolHomePage = () => {
     const navigate = useNavigate()
     return (
         <>
-            <div className="flex justify-center w-full mt-24">
-                <div className="w-2/3 flex justify-between">
-                    <div className="flex flex-col">
-                        <h1 className="font-montserrat font-semibold text-3xl text-white mb-8">Grade 6-10</h1>
-                        <span className="max-w-96 font-montserrat font-normal text-sm text-white">
-                            Our programs for Grades 6-10 ensure success in school exams, Olympiads, and other competitive tests. Focused on key NCERT subjects, we nurture fundamentals, problem-solving, and scientific thinking, equipping students for a competitive edge and a promising future.
-                        </span>
-                    </div>
-
-                    <div className="size-80 mr-14">
-                        <img src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729081870/200_grade_6_10_lakdfs.webp" alt="Grade 6-10" />
-                    </div>
+        <div className="flex justify-center w-full mt-24">
+            <div className="w-full sm:w-2/3 flex flex-col sm:flex-row justify-between items-center sm:items-start">
+                <div className="flex flex-col w-full sm:w-2/3">
+                    <h1 className="font-montserrat font-semibold text-3xl text-white mb-4 sm:mb-8">Grade 6-10</h1>
+                    <span className="max-w-full sm:max-w-96 font-montserrat font-normal text-sm text-white">
+                        Our programs for Grades 6-10 ensure success in school exams, Olympiads, and other competitive tests. Focused on key NCERT subjects, we nurture fundamentals, problem-solving, and scientific thinking, equipping students for a competitive edge and a promising future.
+                    </span>
+                </div>
+                <div className="w-full sm:w-1/3 flex justify-center mt-6 sm:mt-0">
+                    <img src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1729081870/200_grade_6_10_lakdfs.webp" alt="Grade 6-10" className="w-64 h-auto" />
                 </div>
             </div>
+        </div>
 
-            <div className="flex justify-center items-center mt-24 w-2/3 mx-auto rounded-lg">
-                <img className="w-full" src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1727347657/web_6-10_cikhfw.webp" alt="Program Overview" />
-            </div>
+        <div className="flex justify-center items-center mt-24 w-full sm:w-2/3 mx-auto rounded-lg">
+            <img className="w-full" src="https://res.cloudinary.com/dpzpn3dkw/image/upload/v1727347657/web_6-10_cikhfw.webp" alt="Program Overview" />
+        </div>
+
 
             <div className="w-full flex justify-center mt-12">
                 <div className="w-2/3 flex flex-wrap gap-4 ">
