@@ -20,31 +20,32 @@ const CarouselTwo = () => {
     }, []);
 
     return (
-        <div id="indicators-carousel" className="relative w-full flex flex-col items-center  rounded-lg max-w-screen-lg mx-auto max-h-72">
-           
-            <div className="relative h-56 md:h-96 overflow-hidden w-full rounded-2xl">
-                {images.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        className={`absolute transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        alt={`Slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+        <div className="flex justify-center"> {/* Centering the Carousel */}
+            <div id="indicators-carousel" className="relative flex flex-col items-center justify-center max-w-screen-lg w-full h-auto rounded-lg overflow-hidden">
+                <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-2xl"> {/* 16:9 Aspect Ratio */}
+                    {images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            className={`absolute top-0 left-0 transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
+                            style={{ width: '100%', height: '100%', objectFit: 'contain' }} // Prevents cropping
+                            alt={`Slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
 
-            <div className="flex space-x-2 mt-4">
-                {images.map((_, index) => (
-                    <button
-                        key={index}
-                        type="button"
-                        className={`w-4 h-4 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-400'}`}
-                        aria-current={currentIndex === index ? 'true' : 'false'}
-                        aria-label={`Slide ${index + 1}`}
-                        onClick={() => setCurrentIndex(index)}
-                    />
-                ))}
+                <div className="flex space-x-2 mt-4">
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            type="button"
+                            className={`w-4 h-4 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-gray-400'}`}
+                            aria-current={currentIndex === index ? 'true' : 'false'}
+                            aria-label={`Slide ${index + 1}`}
+                            onClick={() => setCurrentIndex(index)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

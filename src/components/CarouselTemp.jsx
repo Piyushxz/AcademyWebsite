@@ -25,27 +25,26 @@ const CarouselTemp = () => {
 
     return (
         <div className="flex flex-col justify-center items-center">
-            <h1 className="font-montserrat font-semibold text-5xl text-white">Our remarkable results in 2024</h1>
-            <div id="indicators-carousel" className="relative w-full flex flex-row justify-center rounded-lg max-w-screen-lg mx-auto ">
-                <div className="relative overflow-hidden w-1/2 rounded-2xl mt-20 bg-white">
+            <h1 className="font-montserrat font-semibold text-3xl text-white text-center md:text-left ">Our remarkable results in 2024</h1>
+            <div id="indicators-carousel" className="relative w-full flex flex-col md:flex-row justify-center rounded-lg max-w-screen-lg mx-auto">
+                <div className="relative overflow-hidden w-full md:w-1/2 rounded-2xl mt-20 bg-white">
                     {/* Dynamic Image Display */}
                     <img
                         src={images[currentIndex].img}
-                        className="object-cover max-h-full"
+                        className="object-cover w-full h-60 md:h-auto"
                         alt={`Slide ${currentIndex + 1}`}
                     />
                 </div>
 
-                <div className='w-1/2 rounded-2xl mt-20 flex items-center p-6'>
+                <div className='w-full md:w-1/2 rounded-2xl mt-20 flex items-center p-6'>
                     <div className='flex flex-col'>
-                        {/* Dynamic Title and Description */}
-                        <h1 className='text-2xl font-montserrat font-bold text-white'>{images[currentIndex].title}</h1>
-                        <h2 className='text-base text-gray-400 font-montserrat font-normal mt-4'>{images[currentIndex].description}</h2>
+                     
+                        <h1 className='text-xl md:text-2xl font-montserrat font-bold text-white'>{images[currentIndex].title}</h1>
+                        <h2 className='text-sm md:text-base text-gray-400 font-montserrat font-normal mt-4'>{images[currentIndex].description}</h2>
                     </div>
                 </div>
             </div>
 
-            {/* Slider indicators (Dots) */}
             <div className="flex space-x-2 mt-4">
                 {images.map((_, index) => (
                     <button

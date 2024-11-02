@@ -14,26 +14,24 @@ const CarouselOne = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(goToNextSlide, 5000); 
-        return () => clearInterval(interval); 
+        const interval = setInterval(goToNextSlide, 5000);
+        return () => clearInterval(interval);
     }, []);
 
     return (
-        <div id="indicators-carousel" className="relative w-full flex flex-col items-center ">
-            {/* Image Carousel */}
-            <div className="relative h-56 md:h-96 overflow-hidden w-full flex justify-center items-center">
+        <div className="relative w-full flex flex-col items-center">
+            <div className="relative overflow-hidden w-full flex justify-center items-center h-[50vh] md:h-[60vh]"> 
                 {images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         className={`absolute transition-opacity duration-700 ease-in-out ${currentIndex === index ? 'opacity-100' : 'opacity-0'}`}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        alt={`Slide ${index + 1}`}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                        alt={`Slide ${index + 1}`} 
                     />
                 ))}
             </div>
 
-            {/* Slider indicators (Dots) - Now under the image */}
             <div className="flex space-x-3 mt-4">
                 {images.map((_, index) => (
                     <button
